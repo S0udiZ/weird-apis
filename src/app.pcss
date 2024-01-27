@@ -58,10 +58,31 @@
 
 @layer base {
 	* {
-		@apply border-border;
+		@apply border-border min-w-0 min-h-0;
 	font-family: "Monaspace Krypton";
 	}
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+
+.main-list {
+	@apply list-disc list-inside border-2 border-foreground min-w-max max-w-max ml-8 pl-4 pr-16 my-4;
+}
+
+.main-list a {
+	@apply hover:underline;
+}
+
+.underlist > ul {
+	@apply list-disc indent-8 list-inside;
+}
+
+.underlist {
+	@apply grid grid-flow-row
+}
+
+.api-route {
+	@apply p-2 border bg-neutral-500 rounded-lg text-white;
 }
